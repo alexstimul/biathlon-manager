@@ -1,12 +1,10 @@
 {
   "name": "biathlon-manager-service",
   "version": "1.0.0",
-  "description": "",
-  "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts",
+    "start": "node dist/app.js",
+    "dev": "ts-node src/app.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit"
@@ -33,6 +31,7 @@
     "typescript-eslint": "^8.47.0"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0"
   }
 }
