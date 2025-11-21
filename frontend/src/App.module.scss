@@ -1,0 +1,9 @@
+.app {
+    display: grid;
+    grid-template-columns: 248px auto;
+
+    &__content {
+        padding: 32px;
+        margin: 0 185px;
+    }
+}
