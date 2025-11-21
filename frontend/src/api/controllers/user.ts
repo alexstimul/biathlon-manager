@@ -3,16 +3,14 @@ import { queryApi } from "../api"
 
 export const userApi = queryApi.injectEndpoints({
     endpoints: build => ({
-        authUser: build.mutation<User, { login: string }>({
-            query: (credentials) => ({
+        authUser: build.mutation<User, string>({
+            query: email => ({
                 url: "user/auth",
                 method: "POST", 
-                body: credentials
+                body: { email }
             })
         })
     })
 });
 
-export const { 
-    useAuthUserMutation
-} = userApi
+export const { useAuthUserMutation } = userApi
